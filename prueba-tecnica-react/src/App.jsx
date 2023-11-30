@@ -1,4 +1,4 @@
-import { CatImages } from '../component.jsx'
+import { CatImages } from '../CatFactsComponent.jsx'
 import './App.css'
 
 export function App () {
