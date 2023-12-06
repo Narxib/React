@@ -1,21 +1,46 @@
-.page{
-  display:flex;
+.page {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 800px;
 }
 
-main{
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+form {
+  align-items: center;
   display: flex;
   justify-content: center;
 }
 
-form{
-  align-items: center;
-  display:flex;
-  justify-content: center;
+.error {
+  color: Red;
 }
 
-.error{
-  color:Red;
+.movies {
+  list-style: none;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+
+}
+
+.movie {
+  text-align: center;
+
+}
+
+.movie h3,
+.movie p {
+  margin: 0;
 }
