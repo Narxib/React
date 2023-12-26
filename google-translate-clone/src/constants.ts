@@ -1,5 +1,5 @@
 export const SUPPORTED_LANGUAGES = {
-  en: 'Ensligh',
+  en: 'English',
   es: 'Español',
   de: 'Deutch'
 }

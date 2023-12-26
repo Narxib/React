@@ -4,19 +4,24 @@ import { ArrowsIcon } from './components/icons'
 import { Container, Row, Col, Button, Stack } from 'react-bootstrap'
 import { useStore } from './hooks/useStore'
 import { AUTO_LANGUAGE } from './constants'
+import { LanguageSelector } from './components/LanguageSelector'
 
 function App () {
-  const { fromLanguage, toLanguage, setFromLanguage, interchangeLanguages } = useStore()
+  const { fromLanguage, toLanguage, setFromLanguage, setToLanguage, interchangeLanguages } = useStore()
   return (
     <Container fluid>
       <h1>Goole Translate</h1>
       <Row>
         <Col><h2>From</h2>
+          <LanguageSelector onChange={setFromLanguage}
+          type="from"
+          value={fromLanguage}
+           />
           {fromLanguage}
         </Col>
-        <Col><button style={{ backgroundColor: 'grey' }} variant="link" disabled={fromLanguage === AUTO_LANGUAGE} onClick={interchangeLanguages}><ArrowsIcon /></button></Col>
+        <Col><button style={{ backgroundColor: 'grey' }} disabled={fromLanguage === AUTO_LANGUAGE} onClick={interchangeLanguages}><ArrowsIcon /></button></Col>
         <Col><h2>To</h2>
-          {toLanguage}
+          <LanguageSelector type="to" value={toLanguage} onChange={setToLanguage} />
         </Col>
       </Row>
     </Container>
