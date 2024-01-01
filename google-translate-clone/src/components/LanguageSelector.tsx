@@ -1,7 +1,7 @@
 import { Form } from 'react-bootstrap'
 import { AUTO_LANGUAGE, SUPPORTED_LANGUAGES } from '../constants'
 import React from 'react'
-import { type SectionType, type FromLanguage, type Language } from '../types'
+import { type SectionType, type FromLanguage, type Language } from '../types.d'
 
 type Props =
 | { type: SectionType.From, value: FromLanguage, onChange: (language: FromLanguage) => void }

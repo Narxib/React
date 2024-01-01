@@ -6,32 +6,36 @@ import { useStore } from './hooks/useStore'
 import { AUTO_LANGUAGE } from './constants'
 import { LanguageSelector } from './components/LanguageSelector'
 import { TextArea } from './components/TextArea'
-import { SectionType } from './types'
+import { SectionType } from './types.d'
 
 function App () {
-  const { fromLanguage, toLanguage, setFromText, setResult, setFromLanguage, fromText, setToLanguage, interchangeLanguages, result } = useStore()
+  const { fromLanguage, loading, toLanguage, setFromText, setResult, setFromLanguage, fromText, setToLanguage, interchangeLanguages, result } = useStore()
   return (
     <Container fluid>
       <h1>Goole Translate</h1>
+
       <Row>
         <Col><h2>From</h2>
           <Stack gap={2}>
-          <LanguageSelector onChange={setFromLanguage}
-          type="from"
-          onChange={setFromText}
+          <LanguageSelector
+          type={SectionType.From}
           value={fromLanguage}
-           />
-          <TextArea type={SectionType.From} placeholder='Introduce texto' value={fromText}> </TextArea>
+          onChange={setFromLanguage}
+          />
+          <TextArea type={SectionType.From} value={fromText} onChange={setFromText} > </TextArea>
           </Stack>
         </Col>
+
         <Col><button style={{ backgroundColor: 'white' }} disabled={fromLanguage === AUTO_LANGUAGE} onClick={interchangeLanguages}><ArrowsIcon /></button></Col>
+
         <Col><h2>To</h2>
           <Stack gap={2}>
-          <LanguageSelector type="to" value={toLanguage} onChange={setToLanguage} />
-          <TextArea onChange={setResult} type={SectionType.To} placeholder='Traduccion' value={result} ></TextArea>
+          <LanguageSelector type={SectionType.To} value={toLanguage} onChange={setToLanguage} />
+          <TextArea loading={loading} onChange={setResult} type={SectionType.To} value={result} ></TextArea>
           </Stack>
         </Col>
       </Row>
+
     </Container>
   )
 }
