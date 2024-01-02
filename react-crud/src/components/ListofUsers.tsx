@@ -9,34 +9,14 @@ import {
 	TableHeaderCell,
 	TableBody,
 } from "@tremor/react";
-
-const users: {
-	id: string;
-	name: string;
-	email: string;
-	github: string;
-}[] = [
-	{
-		id: "1",
-		name: "Brian",
-		email: "brianzaragoza25@gmail.com",
-		github: "Narxib",
-	},
-	{
-		id: "2",
-		name: "Brenda",
-		email: "brenda@gmail.com",
-		github: "@Brenda",
-	},
-	{
-		id: "3",
-		name: "Kevin",
-		email: "kevin@gmail.com",
-		github: "@Kevin",
-	},
-];
+import { useAppDispatch, useAppSelector } from "../hooks/store";
+import { useUserActions } from "../hooks/useUserActions";
+import { UserId } from "../store/users/slice";
 
 export default function ListofUsers() {
+	const users = useAppSelector((state) => state.users);
+	const { removeUser } = useUserActions();
+
 	return (
 		<Card>
 			<Title>
@@ -72,6 +52,7 @@ export default function ListofUsers() {
 							<TableCell>{item.email}</TableCell>
 							<TableCell>{item.github}</TableCell>
 							<button type="button">
+								{/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
@@ -87,7 +68,8 @@ export default function ListofUsers() {
 									/>
 								</svg>
 							</button>
-							<button type="button">
+							<button type="button" onClick={() => removeUser(item.id)}>
+								{/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
