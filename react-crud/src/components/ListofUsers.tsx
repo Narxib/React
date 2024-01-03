@@ -18,6 +18,7 @@ export default function ListofUsers() {
 	const { removeUser } = useUserActions();
 
 	return (
+		
 		<Card>
 			<Title>
 				Usuarios
@@ -35,7 +36,7 @@ export default function ListofUsers() {
 				<TableBody>
 					{users.map((item) => (
 						<TableRow key={item.id}>
-							<TableCell>{item.id}</TableCell>
+							<TableCell>{item.id[0]}</TableCell>
 							<TableCell>
 								<img
 									style={{
@@ -90,5 +91,6 @@ export default function ListofUsers() {
 				</TableBody>
 			</Table>
 		</Card>
+
 	);
 }
