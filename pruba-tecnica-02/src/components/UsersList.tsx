@@ -1,11 +1,12 @@
 import { type User } from '../types.d'
 
 interface Props {
+  deleteUser:(email:string)=>void
   colorized:Boolean
   users: User[]
 }
 
-export function UsersList ({colorized,users }: Props) {
+export function UsersList ({deleteUser, colorized,users }: Props) {
   return (
         <table width="100%" >
             <thead>
@@ -23,14 +24,14 @@ export function UsersList ({colorized,users }: Props) {
                   const color = colorized ? backgroundColor : "transparent"
 
                   return (
-                    <tr style={{backgroundColor:color}} key={index}>
+                    <tr style={{backgroundColor:color}} key={user.login.uuid}>
                             <td>
                                 <img src={user.picture.thumbnail} alt="PF"/>
                             </td>
                             <td>{user.name.first}</td>
                             <td>{user.name.last}</td>
                             <td>{user.location.country}</td>
-                            <td><button>Borrar</button></td>
+                            <td><button onClick={()=>{deleteUser(user.email)}}>Borrar</button></td>
                         </tr>
                   )
                 })}
