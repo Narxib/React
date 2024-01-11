@@ -4,5 +4,20 @@
   padding: 2rem;
   text-align: center;
   width: 100%;
-  
+}
+
+header{
+  display:flex;
+  gap:4px;
+  margin-bottom: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pointer{
+  cursor:pointer;
+}
+
+.pointer:hover{
+  background-color: #333;
 }
