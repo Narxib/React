@@ -18,7 +18,7 @@ function App() {
     return fetch(`https://randomuser.me/api/?results=10&seed=brian&page=${currentPage}`)
       .then(res => { return res.json() })
   }
-  console.log("ce")
+  console.log("ceasdasdasd")
   useEffect(() => {
     setLoading(true)
     fetchUsers(currentPage)
