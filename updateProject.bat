@@ -1,1 +1,3 @@
-GIT add . && git commit -m "refactoring" && git push -u origin main
+set message =%1
+
+git add . && git commit -m `%1` && git push -u origin main
