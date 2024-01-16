@@ -1,51 +1,52 @@
 import './App.css';;
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { SortBy, type User } from "./types.d"
+import { useInfiniteQuery } from "@tanstack/react-query"
 import { UsersList } from './components/UsersList'
 
 function App() {
-  const [users, setUsers] = useState<User[]>([])
+  const fetchUsers = ({ pageParam }: { pageParam: number }) => {
+    return fetch(`https://randomuser.me/api/?results=10&seed=brian&page=${pageParam}`)
+      .then(res => {
+        return res.json()
+      })
+      .then(json => {
+        const nextCursor = Number(json.info.page)
+        return {
+          users: json.results,
+          nextCursor
+        }
+      })
+  }
+
+  const { isLoading, isError, data, refetch, fetchNextPage, hasNextPage } = useInfiniteQuery({
+    queryKey: ["users"],
+    queryFn: ({ pageParam = 1 }) => fetchUsers(pageParam),
+    getNextPageParam: (lastPage, pages) => lastPage.nextCursor
+  })
+
+  const users = data
+
   const [colorized, setColorized] = useState(false)
   const [sorting, setSorting] = useState<SortBy>(SortBy.NONE)
   const [filterBySearch, setfilterBySearch] = useState<string | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
 
-  const originalUsers = useRef<User[]>([])
+  //const originalUsers = useRef<User[]>([])
 
-  const fetchUsers = (page: Number) => {
-    return fetch(`https://randomuser.me/api/?results=10&seed=brian&page=${currentPage}`)
-      .then(res => { return res.json() })
-  }
 
-  useEffect(() => {
-    setLoading(true)
-    fetchUsers(currentPage)
-      .then(usersArray => {
-        setUsers(prevUsers => {
-          const newUsers = prevUsers.concat(usersArray.results)
-          originalUsers.current = newUsers
-          return newUsers
-        })
-
-      }).catch(err => { console.log(err); setError(err) })
-      .finally(() => {
-        setLoading(false)
-      })
-  }, [currentPage])
 
   const colorize = () => {
     setColorized(!colorized)
   }
 
   const sortUsers = () => {
-    const newSortingValue = sorting === SortBy.NONE ? SortBy.COUNTRY : SortBy.NONE
-    setSorting(newSortingValue)
+    //const newSortingValue = sorting === SortBy.NONE ? SortBy.COUNTRY : SortBy.NONE
+    //setSorting(newSortingValue)
   }
 
-  const filteredUsers = useMemo(() => {
-    console.log('calculate filteredUsers')
+  const filteredUso(() => {
+    console.log('caers = useMemlculate filteredUsers')
     return filterBySearch != null && filterBySearch.length > 0
       ? users.filter(user => {
         return user.location.country.toLowerCase().includes(filterBySearch.toLowerCase())
@@ -54,16 +55,17 @@ function App() {
   }, [users, filterBySearch])
 
   const handleDelete = (email: string) => {
-    const filteredUsers = users.filter((user) => user.email !== email)
-    setUsers(filteredUsers)
+    //const filteredUsers = users.filter((user) => user.email !== email)
+    //setUsers(filteredUsers)
   }
 
   const handleChangeSort = (sort: SortBy) => {
     setSorting(sort)
   }
 
-  const handleReset = () => {
-    setUsers(originalUsers.current)
+  const handleReset = async () => {
+    await refetch()
+
   }
 
 
@@ -95,10 +97,10 @@ function App() {
       </header>
       {users.length > 0 &&
         <UsersList changeSorting={handleChangeSort} deleteUser={handleDelete} colorized={colorized} users={sortedUsers} />}
-      {loading && <p>Loading...</p>}
-      {error && <p>Ha habido un error </p>}
-      {!error && users.length === 0 && <p>No hay usuarios</p>}
-      {!loading && !error && <button onClick={() => setCurrentPage(currentPage + 1)}>Cargar mas resultados</button>}
+      {isLoading && <p>Loading...</p>}
+      {isError && <p>Ha habido un error </p>}
+      {!isLoading && !isError && users.length === 0 && <p>No hay usuarios</p>}
+      {!isLoading && !isError && <button onClick={() => setCurrentPage(currentPage + 1)}>Cargar mas resultados</button>}
     </>
   )
 }
