@@ -7,7 +7,8 @@ const { isLoading, isError, data, refetch, fetchNextPage, hasNextPage } =
 useInfiniteQuery<{ nextCursor: number, users: User[] }>({
   queryKey: ['users'],
   queryFn: fetchUsers,
-  getNextPageParam: (lastPage, pages) => lastPage.nextCursor
+  getNextPageParam: (lastPage, pages) => lastPage.nextCursor,
+  staleTime:1000
 })
 return {
     isLoading,
