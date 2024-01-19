@@ -2,6 +2,8 @@ import './App.css';
 import { JavascriptLogo } from './JavascriptLogo';
 import { Container, Typography, Stack } from '@mui/material';
 import { Start } from './Start';
+import { Game } from './Game';
+
 import { useQuestionsStore } from './store/questions';
 
 function App() {
@@ -17,8 +19,8 @@ function App() {
           <h2>Javascript Quizz</h2>
         </Stack>
       </Container>
-
-      <Start />
+      {questions.length === 0 && <Start />}
+      {questions.length > 0 && <Game />}
     </main >
   )
 }
