@@ -5,6 +5,7 @@ import { Start } from './Start';
 import { Game } from './Game';
 
 import { useQuestionsStore } from './store/questions';
+import { Footer } from './Footer';
 
 function App() {
   const questions = useQuestionsStore(state => state.questions)

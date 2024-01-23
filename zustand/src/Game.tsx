@@ -1,13 +1,18 @@
-import { Card, Typography, Stack, List, ListItem, ListItemButton, ListItemText } from "@mui/material"
+import { Card, Typography, Stack, List, ListItem, ListItemButton, ListItemText, IconButton } from "@mui/material"
 import { useQuestionsStore } from "./store/questions"
 import { type Question as QuestionType } from "./store/types"
 import SyntaxHighlighter from "react-syntax-highlighter"
 import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs"
+import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material"
+import { Footer } from "./Footer"
+
 
 const Question = ({ info }: { info: QuestionType }) => {
     const selectAnswer = useQuestionsStore(state => state.selectAnswer)
+    const goNextQuestion = useQuestionsStore(state => state.goNextQuestion)
     const createHandleClick = (answerIndex: number) => () => {
         selectAnswer(info.id, answerIndex)
+        goNextQuestion
     }
 
     const getBackgroundColor = (info: QuestionType, index: number) => {
@@ -43,11 +48,23 @@ const Question = ({ info }: { info: QuestionType }) => {
 export const Game = () => {
     const questions = useQuestionsStore(state => state.questions)
     const currentQuestion = useQuestionsStore(state => state.currentQuestion)
+    const goNextQuestion = useQuestionsStore(state => state.goNextQuestion)
+    const goPreviusQuestion = useQuestionsStore(state => state.goPreviusQuestion)
     const questionInfo = questions[currentQuestion]
 
     return (
         <>
+            <Stack direction="row" gap={2} alignItems="center" justifyContent="center">
+                <IconButton onClick={goPreviusQuestion} disabled={currentQuestion === 0}>
+                    <ArrowBackIosNew />
+                </IconButton>
+                {currentQuestion + 1}/{questions.length}
+                <IconButton onClick={goNextQuestion} disabled={currentQuestion >= questions.length - 1} >
+                    <ArrowForwardIos />
+                </IconButton>
+            </Stack>
             <Question info={questionInfo} />
+            <Footer />
         </>
     )
 }
