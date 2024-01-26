@@ -12,7 +12,7 @@ const Question = ({ info }: { info: QuestionType }) => {
     const goNextQuestion = useQuestionsStore(state => state.goNextQuestion)
     const createHandleClick = (answerIndex: number) => () => {
         selectAnswer(info.id, answerIndex)
-        goNextQuestion
+
     }
 
     const getBackgroundColor = (info: QuestionType, index: number) => {

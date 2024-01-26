@@ -1,0 +1,280 @@
+[
+    {
+      "id": "1",
+      "question": "¿Cuál es el nombre del protagonista en Naruto?",
+      "answers": ["Sung","Goku","Naruto","Rimuru"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 2
+    },
+    {
+      "id": "2",
+      "question": "¿En qué anime aparece el personaje Monkey D. Luffy?",
+      "answers": ["One Piece", "Bleach","Slime","Solo Leveling"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "3",
+      "question": "En Ataque a los Titanes, ¿qué se sabe que comen los Titanes?",
+      "answers": ["Frutas","Rocas","Humanos","Dango"],
+      "correctAnswer": 2
+    },
+    {
+      "id": "4",
+      "question": "¿Cuál es el nombre del personaje principal en One Punch Man?",
+      "answers": ["Aoba","Saitama","Mr Satan", "Doraemon"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 1
+    },
+    {
+      "id": "5",
+      "question": "¿En qué anime se ambienta el mundo ficticio de Remnant?",
+      "answers": ["Fate","Berserk","HunterxHunter","Death Note"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "6",
+      "question": "¿Quién es el autor de la serie de manga 'Death Note'?",
+      "answers": ["Masashi Kishimoto","Hajime Isayama","Tite Kubo","Tsugumi Ohba"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 3
+    },
+    {
+      "id": "7",
+      "question": "¿Qué anime presenta a personajes conocidos como 'Soul Reapers'?",
+      "answers": ["Naruto","One Piece","Bleach","Dragon Ball"],
+      "correctAnswer": 2
+    },
+    {
+      "id": "8",
+      "question": "En 'Dragon Ball Z', ¿cuál es el nombre del hijo mayor de Goku?",
+      "answers": ["Gohan","Vegeta","Trunks","Piccolo"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "9",
+      "question": "¿Quién es el creador de la serie de manga 'Fairy Tail'?",
+      "answers": ["Eiichiro Oda","Hiro Mashima","Yoshihiro Togashi","Naoko Takeuchi"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 1
+    },
+    {
+      "id": "10",
+      "question": "En 'Fullmetal Alchemist', ¿cuál es el nombre del hermano menor de Edward Elric?",
+      "answers": ["Alphonse","Roy","Winry","Scar"],
+      "correctAnswer": 0
+    },
+    {
+      "id": "11",
+      "question": "¿Qué serie de anime sigue el viaje de un grupo de samuráis?",
+      "answers": ["Naruto","One Piece","Samurai Champloo","Bleach"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 2
+    },
+    {
+      "id": "12",
+      "question": "¿Cuál es el nombre del arma humanoide gigante en 'Neon Genesis Evangelion'?",
+      "answers": ["AT-AT","EVA","Mecha","Jaeger"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 1
+    },
+    {
+      "id": "13",
+      "question": "En 'Cowboy Bebop', ¿cuál es el nombre de la nave de Spike Spiegel?",
+      "answers": ["Swordfish II","Barracuda","Valkyrie","Blackbird"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "14",
+      "question": "¿Quién es conocido como el 'Rey de los Piratas' en 'One Piece'?",
+      "answers": ["Gol D. Roger","Monkey D. Luffy","Barbanegra","Barbablanca"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "15",
+      "question": "¿Qué anime presenta a un personaje llamado Light Yagami?",
+      "answers": ["Ataque de los Titanes","Naruto","Death Note","One Punch Man"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 2
+    },
+    {
+      "id": "16",
+      "question": "¿Cuál es el nombre de la organización en 'Tokyo Ghoul' que investiga y combate a los ghouls?",
+      "answers": ["CCG","Akatsuki","Phantom Troupe","Black Bulls"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "17",
+      "question": "En 'My Hero Academia', ¿cuál es el nombre del protagonista principal?",
+      "answers": ["Izuku Midoriya","Katsuki Bakugo","Shoto Todoroki","All Might"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "18",
+      "question": "¿Quién es el creador de la serie de manga 'Hunter x Hunter'?",
+      "answers": ["Eiichiro Oda","Yoshihiro Togashi","Masashi Kishimoto","Hajime Isayama"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 1
+    },
+    {
+      "id": "19",
+      "question": "¿Qué anime presenta a un personaje llamado 'Guts' que empuña una espada masiva?",
+      "answers": ["Fairy Tail","Berserk","Sword Art Online","Ataque de los Titanes"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 1
+    },
+    {
+      "id": "20",
+      "question": "En 'One Piece', ¿cuál es el nombre de la espada característica de Zoro?",
+      "answers": ["Wado Ichimonji","Shusui","Yoru","Sandai Kitetsu"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "21",
+      "question": "¿Quién es el autor del manga 'Dragon Ball'?",
+      "answers": ["Masashi Kishimoto","Hirohiko Araki","Akira Toriyama","Nobuhiro Watsuki"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 2
+    },
+    {
+      "id": "22",
+      "question": "¿Cuál es el nombre del protagonista en 'Attack on Titan'?",
+      "answers": ["Eren Yeager","Levi Ackerman","Mikasa Ackerman","Armin Arlert"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "23",
+      "question": "En 'Naruto', ¿cuál es el nombre del sensei del Equipo 7?",
+      "answers": ["Kakashi Hatake","Jiraiya","Orochimaru","Minato Namikaze"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "24",
+      "question": "¿Qué es lo que debe hacer el protagonista en 'Attack on Titan' para derrotar a los titanes?",
+      "answers": ["Destruir la fuente de su poder","Encerrarlos en una prisión","Negociar con ellos","Adaptarse a su estilo de vida"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "25",
+      "question": "¿En qué ciudad está basada la trama de 'Tokyo Ghoul'?",
+      "answers": ["Tokyo","Osaka","Kyoto","Hokkaido"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "26",
+      "question": "¿Quién es el protagonista de 'Dragon Ball Z'?",
+      "answers": ["Goku","Vegeta","Gohan","Piccolo"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "27",
+      "question": "En 'Naruto', ¿quién es el enemigo principal?",
+      "answers": ["Akatsuki","Orochimaru","Madara Uchiha","Kaguya Otsutsuki"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 2
+    },
+    {
+      "id": "28",
+      "question": "¿Qué es lo que busca el protagonista en 'Fullmetal Alchemist'?",
+      "answers": ["La piedra filosofal","La venganza","El poder supremo","La redención"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "29",
+      "question": "¿En qué época histórica está ambientado 'Samurai Champloo'?",
+      "answers": ["Periodo Edo","Periodo Sengoku","Restauración Meiji","Periodo Heian"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "30",
+      "question": "¿Cuál es el objetivo de los personajes principales en 'One Piece'?",
+      "answers": ["Encontrar el tesoro One Piece","Convertirse en los piratas más fuertes","Vengar la muerte de sus padres","Crear un mundo pacífico"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "31",
+      "question": "¿Cuál es el poder sobrenatural principal en 'Bleach'?",
+      "answers": ["Shinigami","Ninjutsu","Magia","Quincy"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "32",
+      "question": "¿Cuál es la profesión del protagonista en 'Cowboy Bebop'?",
+      "answers": ["Cazarrecompensas","Pirata espacial","Explorador galáctico","Policía interestelar"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "33",
+      "question": "¿Cuál es el nombre del mundo en 'Sword Art Online'?",
+      "answers": ["Aincrad","Alfheim","Gun Gale","Underworld"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "34",
+      "question": "¿En qué lugar se lleva a cabo la mayoría de las batallas en 'Fairy Tail'?",
+      "answers": ["Fiore","Alvarez","Magnolia","Edolas"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 2
+    },
+    {
+      "id": "35",
+      "question": "¿Qué es lo que hace único al protagonista en 'One Punch Man'?",
+      "answers": ["Puede derrotar a cualquier enemigo con un solo golpe","Puede copiar las habilidades de sus enemigos","Tiene una fuerza sobrehumana","Puede predecir el futuro"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "36",
+      "question": "¿Cuál es el objetivo principal del protagonista en 'Hunter x Hunter'?",
+      "answers": ["Encontrar a su padre","Convertirse en el mejor cazador","Hacer amigos","Vengar la muerte de su madre"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "37",
+      "question": "¿Quién es el mentor de Ichigo en 'Bleach'?",
+      "answers": ["Kisuke Urahara","Byakuya Kuchiki","Renji Abarai","Rukia Kuchiki"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    },
+    {
+      "id": "38",
+      "question": "¿Cuál es el objetivo de la Hermandad en 'Fullmetal Alchemist'?",
+      "answers": ["Proteger la alquimia","Destruir la alquimia","Dominar el mundo","Crear alquimistas perfectos"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 1
+    },
+    {
+      "id": "39",
+      "question": "¿Qué raza es Rem en 'Re:Zero - Starting Life in Another World'?",
+      "answers": ["Oni","Humano","Elfa","Demonio"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 3
+    },
+    {
+      "id": "40",
+      "question": "¿Qué significa 'Shinigami' en japonés?",
+      "answers": ["Dios de la muerte","Guerrero espiritual","Cazador de demonios","Guardián del inframundo"],
+      "hasbeenAnswered": false,
+      "correctAnswer": 0
+    }
+]   
+  
