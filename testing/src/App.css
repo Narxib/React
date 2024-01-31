@@ -1,0 +1,17 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.followButtonActive:hover{
+  border:2px solid skyblue;
+}
+
+.followButtonNonActive:hover{
+  border:2px solid red;
+}
+
+
