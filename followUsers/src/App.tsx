@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+      {users.length < 0 && <FetchUsers />}
       {users.length === 0 && <FetchUsers />}
     </>
   )

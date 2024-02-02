@@ -7,7 +7,7 @@ export function useMovies({ search, sort }) {
   const [loading, setLoading] = useState(false)
   // el error no se usa pero puedes implementarlo
   // si quieres:
-  const [, setError] = useState(null)
+  const [error, setError] = useState(null)
   const previousSearch = useRef(search)
 
   const getMovies = useCallback(async ({ search }) => {

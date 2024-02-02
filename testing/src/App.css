@@ -5,13 +5,11 @@
   text-align: center;
 }
 
-
-.followButtonActive:hover{
-  border:2px solid skyblue;
+.devs{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  position:fixed;
+  top:90%;
+  left:95%;
 }
-
-.followButtonNonActive:hover{
-  border:2px solid red;
-}
-
-
