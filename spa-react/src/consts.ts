@@ -1,0 +1,1 @@
+export const EVENTS = {NAV_EVENT:"pushstate", POP_EVENT:"popstate"}
